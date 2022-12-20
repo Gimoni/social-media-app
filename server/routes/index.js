@@ -55,5 +55,12 @@ router.get('/search', auth, search_controller.username);
 // FROFILE (프로필)
 router.get('/profiles/:username', auth, profile_controller.profile);
 router.get('/profiles/:username/articles', auth, profile_controller.timeline);
+router.post('/profiles/:username/follow', auth, profile_controller.follow);
+router.delete('/profiles/:username/follow', auth, profile_controller.unfollow);
+router.get('/profiles/:username/followers', auth, profile_controller.follower_list);
+router.get('/profiles/:username/following', auth, profile_controller.following_list);
+
+
+
 
 module.exports = router;
