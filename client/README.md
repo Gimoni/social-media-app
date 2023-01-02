@@ -39,3 +39,17 @@ Modal.js (모달)
 # 유틸리티 함수
 - 데이터 가져오기
 fetchData.js
+
+
+------------------
+
+명령어 실행 about populatedb 
+ternemal
+
+/social-media-app/server
+
+// node에게 populatedb.js 파일을 실행
+명령어:::
+
+node populatedb mongodb://127.0.0.1:27017/social_media_db
+
