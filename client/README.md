@@ -40,13 +40,14 @@ Modal.js (모달)
 - 데이터 가져오기
 fetchData.js
 
+<<<<<<< HEAD
 # production environment 구축하기
 
 클라이언트 : Github pages (https://pages.github.com/)
 서버 : Railway(railway.app / https://docs.railway.app/)
 데이터베이스 : Mongodb Atlas 
 
-------------------
+
 [ server open ]
 
 /social-media-app/server
@@ -62,10 +63,6 @@ ctrl + c 서버끄기
 
 
 
-
-
-------------------
-
 명령어 실행 about populatedb 
 ternemal
 
@@ -75,3 +72,7 @@ ternemal
 명령어:::
 
 node populatedb mongodb://127.0.0.1:27017/social_media_db
+
+
+
+>>>>>>> origin/main
