@@ -42,6 +42,24 @@ fetchData.js
 
 
 ------------------
+[ server open ]
+
+/social-media-app/server
+
+npm run devstart
+
+[server close]
+
+ctrl + c 서버끄기
+
+서버를 끄지않고 닫고 다시 오픈하는경우 
+서버를 종료시키고 새로운 서버를 다시 오픈해야 작동을함. 
+
+
+
+
+
+------------------
 
 명령어 실행 about populatedb 
 ternemal
