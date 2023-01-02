@@ -23,16 +23,57 @@ export default function ArticleView() {
         .finally(() => setIsLoaded(true))
     }, [])
 
+    // 좋아요
     function favorite(articleId) {
-
+        fetch(`${process.env.REACT_APP_SERVER}/articles/${articleId}/favorite`, {
+            method: 'POST',
+            headers: { 'Authorization': `Bearer ${localStorage.getItem("token")}`}
+        })
+        .then(res => {
+            if (!res.ok) {
+                throw res;
+            }
+            const editedArticle = {...article, isFavorite: true, favoriteCount: article.favoriteCount + 1};
+            //  article state를 업데이트한다
+            setArticles(editedArticle);
+        })
+        .catch(error => {
+            alert("Something's broken")
+        })
     }
 
+    // 좋아요 취소
     function unfavorite(articleId) {
-
+        fetch(`${process.env.REACT_APP_SERVER}/articles/${articleId}/favorite`, {
+            method: 'DELETE',
+            headers: { 'Authorization' : `Bearer ${localStorage.getItem("token")}`},
+        })
+        .then(res => {
+            if (!res.ok) {
+                throw res;
+            }
+            const editedArticle = {...article, isFavorite: false, favoriteCount: article.favoriteCount -1};
+            // article 업데이트
+            setArticles(editedArticle);
+        })
     }
 
+    // 게시물 삭제
     function deleteArticle(articleId) {
-
+        fetch(`${process.env.REACT_APP_SERVER}/articles/${articleId}`,{
+            method: 'DELETE',
+            headers: { 'Authorization' : `Bearer ${localStorage.getItem("token")}`}
+        })
+        .then(res => {
+            if (!res.ok) {
+                throw res;
+            }
+            // 게시물 삭제후, 피드로 이동
+            navigate("/", { replace: true })
+        })
+        .catch(error => {
+            alert("Something's broken")
+        })
     }
 
     if (error) {

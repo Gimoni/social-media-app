@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export default function Modal({children}) {
+    // 모달 윈도우의 가시성을 결정하는 state
     const [active, setActive] = useState(false);
 
     return (
