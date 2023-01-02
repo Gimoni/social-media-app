@@ -41,33 +41,4 @@ Modal.js (모달)
 fetchData.js
 
 
-------------------
-[ server open ]
-
-/social-media-app/server
-
-npm run devstart
-
-[server close]
-
-ctrl + c 서버끄기
-
-서버를 끄지않고 닫고 다시 오픈하는경우 
-서버를 종료시키고 새로운 서버를 다시 오픈해야 작동을함. 
-
-
-
-
-
-------------------
-
-명령어 실행 about populatedb 
-ternemal
-
-/social-media-app/server
-
-// node에게 populatedb.js 파일을 실행
-명령어:::
-
-node populatedb mongodb://127.0.0.1:27017/social_media_db
 
